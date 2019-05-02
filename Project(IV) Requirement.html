@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBliC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+   <head>
+      <title>CS363: Database Design and Implementation </title>
+   </head>
+
+<body>
+
+<center><h3>
+            CS 3630: Project - Phase IV (20 points)
+<br /> Due Friday, May 10, by 11 pm 
+</h3></center>
+<p>
+Use Visual Studio 2017 to create a Windows GUI program to access and update the Staff table and related Qualifications and WorkExperience tables. 
+      </p>
+
+<h4> The SQL Script </h4>
+<ul>
+<li> <a href="http://www.uwplatt.edu/~yangq/CS363/ProgDir/PhaseIV.sql">The script file</a></li>
+<li> You must use the given SQL script file to create three tables and insert some records. </li>
+
+</ul>
+
+<h4> The GUI Program </h4>
+<ul>
+<!--
+    <li> You must use the OleDb classes to connect to EDDB. </li>
+-->    
+    <li> The form title must be "CS3630 " followed by the names of all group members. </li>
+    <li> When the data for one staff member is displayed, all information must be displayed on the same form, 
+         including all qualifications records and all work experience records for the staff member. </li>
+    <li> The StaffNo should be displayed with the staff information, 
+         but should not be displayed with qualifications and work experience. </li>
+    <li> All dates should be displayed in short format, e.g., 5/16/2004. </li>
+    
+    <li> You must provide the navigation buttons so the user can easily go to the next, previous, first or last staff member. </li>
+    <li> The navigation buttons for each table should be enabled and disabled appropriately. </li>
+    <li> The total records count and current record position for each table should be displayed. </li>
+
+    <li> When a NEW button is clicked, all buttons should be disabled except the corresponding Save button and Delete button . </li>
+    <li> After the new record is saved or deleted, all buttons should be enabled and disabled appropriately. </li>
+
+    <li> You must provide a search buttons so the user can find all staff members with a specified qualification type
+         or work experience with a given organization. </li>
+    <li> After a search is done, only those staff members satisfying the search condition (could be none) will be displayed. </li>
+    <li> The search condition can be removed so all staff members can be displayed when needed. </li>
+    <li> Your form and controls must be very similar to the sample program. </li>
+</ul>
+
+<h4> Submission </h4>
+    <p>Zip your solution folder and upload it to Canvas. 
+    The name of the folder must be <b>UserName1_UserName2_PhaseIV</b>. 
+    </p>
+
+   <p>Your program must run with Visual Studio 2017 in Lab 206! </p>
+</body>
+</html>

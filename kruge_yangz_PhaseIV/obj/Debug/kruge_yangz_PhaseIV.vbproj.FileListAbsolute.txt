@@ -1,0 +1,6 @@
+J:\Spring2019\Database\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.vbprojResolveAssemblyReference.cache
+J:\Spring2019\Database\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.FormClassLogin.resources
+J:\Spring2019\Database\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.FormClassEmployee.resources
+J:\Spring2019\Database\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.Resources.resources
+J:\Spring2019\Database\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.vbproj.GenerateResource.cache
+J:\Spring2019\Database\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.vbproj.CoreCompileInputs.cache

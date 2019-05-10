@@ -22,6 +22,7 @@
         OracleConnection.ConnectionString = "Data Source=" & Server & ";User ID=" & UserName & ";Password=" & PassWord & ";Unicode=True"
         ' Set up booking table
 
+
         ' Set up hotel table 
         hotelCommand.CommandType = CommandType.Text
         hotelCommand.CommandText = "Select * from UWP_Staff"
@@ -31,6 +32,15 @@
         hotelBuilder = New System.Data.OracleClient.OracleCommandBuilder(hotelAdapter)
         hotelAdapter.Fill(hotelTable)
 
+
+        ' Set up hotel table 
+        hotelCommand.CommandType = CommandType.Text
+        hotelCommand.CommandText = "Select * from hotel"
+        hotelCommand.Connection = OracleConnection
+
+        hotelAdapter.SelectCommand = hotelCommand
+        hotelBuilder = New System.Data.OracleClient.OracleCommandBuilder(hotelAdapter)
+        hotelAdapter.Fill(hotelTable)
     End Sub
     ' set the connecting string to debug 
     ' The Enumeration Data Type for user response 
@@ -68,4 +78,6 @@
         End If
     End Sub
 
+
 End Class
+

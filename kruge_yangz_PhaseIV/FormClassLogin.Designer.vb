@@ -34,6 +34,7 @@ Partial Class FormClassLogin
         '
         'txtboxUsername
         '
+        Me.txtboxUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtboxUsername.Location = New System.Drawing.Point(142, 63)
         Me.txtboxUsername.Name = "txtboxUsername"
         Me.txtboxUsername.Size = New System.Drawing.Size(162, 20)
@@ -43,11 +44,13 @@ Partial Class FormClassLogin
         '
         Me.txtboxPassword.Location = New System.Drawing.Point(142, 131)
         Me.txtboxPassword.Name = "txtboxPassword"
+        Me.txtboxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtboxPassword.Size = New System.Drawing.Size(162, 20)
         Me.txtboxPassword.TabIndex = 1
         '
         'txtboxHost
         '
+        Me.txtboxHost.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtboxHost.Location = New System.Drawing.Point(142, 205)
         Me.txtboxHost.Name = "txtboxHost"
         Me.txtboxHost.Size = New System.Drawing.Size(162, 20)
@@ -85,24 +88,28 @@ Partial Class FormClassLogin
         Me.btnOk.Location = New System.Drawing.Point(142, 243)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(75, 23)
-        Me.btnOk.TabIndex = 6
+        Me.btnOk.TabIndex = 3
         Me.btnOk.Text = "OK"
         Me.btnOk.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Location = New System.Drawing.Point(229, 243)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancel.TabIndex = 7
+        Me.btnCancel.TabIndex = 4
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'FormClassLogin
         '
+        Me.AcceptButton = Me.btnOk
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(340, 294)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.Label3)

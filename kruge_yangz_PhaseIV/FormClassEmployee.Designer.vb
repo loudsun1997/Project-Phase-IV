@@ -392,6 +392,7 @@ Partial Class FormClassEmployee
         'boxField
         '
         Me.boxField.FormattingEnabled = True
+        Me.boxField.Items.AddRange(New Object() {"TYPE", "ORGNAME"})
         Me.boxField.Location = New System.Drawing.Point(483, 449)
         Me.boxField.Name = "boxField"
         Me.boxField.Size = New System.Drawing.Size(121, 21)
@@ -417,7 +418,7 @@ Partial Class FormClassEmployee
         '
         'btnExpNext
         '
-        Me.btnExpNext.Location = New System.Drawing.Point(660, 338)
+        Me.btnExpNext.Location = New System.Drawing.Point(613, 338)
         Me.btnExpNext.Name = "btnExpNext"
         Me.btnExpNext.Size = New System.Drawing.Size(28, 23)
         Me.btnExpNext.TabIndex = 40
@@ -426,7 +427,7 @@ Partial Class FormClassEmployee
         '
         'btnExpLast
         '
-        Me.btnExpLast.Location = New System.Drawing.Point(597, 338)
+        Me.btnExpLast.Location = New System.Drawing.Point(647, 339)
         Me.btnExpLast.Name = "btnExpLast"
         Me.btnExpLast.Size = New System.Drawing.Size(46, 20)
         Me.btnExpLast.TabIndex = 41
@@ -792,6 +793,7 @@ Partial Class FormClassEmployee
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(820, 617)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Label29)
         Me.Controls.Add(Me.Label28)
         Me.Controls.Add(Me.Label27)

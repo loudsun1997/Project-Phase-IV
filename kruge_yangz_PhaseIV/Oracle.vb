@@ -25,10 +25,10 @@
     Public Shared Sub LogInAtRunTime()
         ' set the connecting string   
         OracleConnection.ConnectionString = "Data Source=" & Server & ";User ID=" & UserName & ";Password=" & PassWord & ";Unicode=True"
-        ' Set up booking table
 
 
-        ' Set up hotel table 
+
+        ' Set up staff table 
         StaffCommand.CommandType = CommandType.Text
         StaffCommand.CommandText = "Select * from UWP_Staff"
         StaffCommand.Connection = OracleConnection
@@ -36,6 +36,24 @@
         StaffAdapter.SelectCommand = StaffCommand
         StaffCommandBuilder = New System.Data.OracleClient.OracleCommandBuilder(StaffAdapter)
         StaffAdapter.Fill(StaffTable) 'name for the staff table
+
+        ' Set up workExperience table 
+        WorkExperienceCommand.CommandType = CommandType.Text
+        WorkExperienceCommand.CommandText = "Select * from UWP_WorkExperience"
+        WorkExperienceCommand.Connection = OracleConnection
+
+        WorkExperienceAdapter.SelectCommand = WorkExperienceCommand
+        WorkExperienceBuilder = New System.Data.OracleClient.OracleCommandBuilder(WorkExperienceAdapter)
+        WorkExperienceAdapter.Fill(WorkExperienceTable) 'name for the staff table
+
+        ' Set up Qualifications table 
+        QualificationsCommand.CommandType = CommandType.Text
+        QualificationsCommand.CommandText = "Select * from UWP_Qualifications"
+        QualificationsCommand.Connection = OracleConnection
+
+        QualificationsAdapter.SelectCommand = QualificationsCommand
+        QualificationsBuilder = New System.Data.OracleClient.OracleCommandBuilder(QualificationsAdapter)
+        QualificationsAdapter.Fill(QualificationsTable) 'name for the staff table
 
 
 

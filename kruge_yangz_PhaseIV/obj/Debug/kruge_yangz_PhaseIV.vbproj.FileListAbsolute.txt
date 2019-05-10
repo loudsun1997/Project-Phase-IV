@@ -4,3 +4,16 @@ J:\Spring2019\Database\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.FormCla
 J:\Spring2019\Database\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.Resources.resources
 J:\Spring2019\Database\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.vbproj.GenerateResource.cache
 J:\Spring2019\Database\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.vbproj.CoreCompileInputs.cache
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.vbprojResolveAssemblyReference.cache
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.FormClassLogin.resources
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.FormClassEmployee.resources
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.Resources.resources
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.vbproj.GenerateResource.cache
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.vbproj.CoreCompileInputs.cache
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\bin\Debug\kruge_yangz_PhaseIV.exe.config
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\bin\Debug\kruge_yangz_PhaseIV.exe
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\bin\Debug\kruge_yangz_PhaseIV.pdb
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\bin\Debug\kruge_yangz_PhaseIV.xml
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.exe
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.xml
+C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.pdb

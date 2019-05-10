@@ -45,6 +45,7 @@ Partial Class FormClassLogin
         Me.txtboxPassword.Name = "txtboxPassword"
         Me.txtboxPassword.Size = New System.Drawing.Size(162, 20)
         Me.txtboxPassword.TabIndex = 1
+        Me.txtboxPassword.UseSystemPasswordChar = True
         '
         'txtboxHost
         '

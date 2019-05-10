@@ -18,6 +18,18 @@
     Friend Shared hotelTable As New System.Data.DataTable
 
     Public Shared Sub LogInAtRunTime()
+        ' set the connecting string   
+        OracleConnection.ConnectionString = "Data Source=" & Server & ";User ID=" & UserName & ";Password=" & PassWord & ";Unicode=True"
+        ' Set up booking table
+
+        ' Set up hotel table 
+        hotelCommand.CommandType = CommandType.Text
+        hotelCommand.CommandText = "Select * from UWP_Staff"
+        hotelCommand.Connection = OracleConnection
+
+        hotelAdapter.SelectCommand = hotelCommand
+        hotelBuilder = New System.Data.OracleClient.OracleCommandBuilder(hotelAdapter)
+        hotelAdapter.Fill(hotelTable)
 
     End Sub
     ' set the connecting string to debug 
@@ -32,19 +44,8 @@
         Friend Shared PassWord As String
         Friend Shared Server As String
 
-        ' set the connecting string   
-        OracleConnection.ConnectionString = "Data Source=" & Server & ";User ID=" & UserName & ";Password=" & PassWord & ";Unicode=True"
-        ' Set up booking table
 
-        ' Set up hotel table 
-        hotelCommand.CommandType = CommandType.Text
-        hotelCommand.CommandText = "Select * from hotel"
-        hotelCommand.Connection = OracleConnection
 
-        hotelAdapter.SelectCommand = hotelCommand
-        hotelBuilder = New System.Data.OracleClient.OracleCommandBuilder(hotelAdapter)
-        hotelAdapter.Fill(hotelTable)
-    End Sub
     Public Shared Sub main()
         Dim connected As Boolean
 
@@ -67,5 +68,4 @@
         End If
     End Sub
 
-End Class
 End Class

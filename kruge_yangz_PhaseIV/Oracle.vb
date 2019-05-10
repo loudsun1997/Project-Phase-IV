@@ -5,17 +5,22 @@
 
     Friend Shared OracleConnection As New System.Data.OracleClient.OracleConnection
 
-    ' variables for booking
-    Friend Shared bookingAdapter As New System.Data.OracleClient.OracleDataAdapter
-    Friend Shared bookingCommand As New System.Data.OracleClient.OracleCommand
-    Friend Shared bookingCommandBuilder As System.Data.OracleClient.OracleCommandBuilder
-    Friend Shared myTable As New System.Data.DataTable
+    ' variables for Staff
+    Friend Shared StaffAdapter As New System.Data.OracleClient.OracleDataAdapter
+    Friend Shared StaffCommand As New System.Data.OracleClient.OracleCommand
+    Friend Shared StaffCommandBuilder As System.Data.OracleClient.OracleCommandBuilder
+    Friend Shared StaffTable As New System.Data.DataTable
 
     ' One command, adapter and builder for each table
-    Friend Shared hotelAdapter As New System.Data.OracleClient.OracleDataAdapter
-    Friend Shared hotelCommand As New System.Data.OracleClient.OracleCommand
-    Friend Shared hotelBuilder As System.Data.OracleClient.OracleCommandBuilder
-    Friend Shared hotelTable As New System.Data.DataTable
+    Friend Shared WorkExperienceAdapter As New System.Data.OracleClient.OracleDataAdapter
+    Friend Shared WorkExperienceCommand As New System.Data.OracleClient.OracleCommand
+    Friend Shared WorkExperienceBuilder As System.Data.OracleClient.OracleCommandBuilder
+    Friend Shared WorkExperienceTable As New System.Data.DataTable
+
+    Friend Shared QualificationsAdapter As New System.Data.OracleClient.OracleDataAdapter
+    Friend Shared QualificationsCommand As New System.Data.OracleClient.OracleCommand
+    Friend Shared QualificationsBuilder As System.Data.OracleClient.OracleCommandBuilder
+    Friend Shared QualificationsTable As New System.Data.DataTable
 
     Public Shared Sub LogInAtRunTime()
         ' set the connecting string   
@@ -24,23 +29,16 @@
 
 
         ' Set up hotel table 
-        hotelCommand.CommandType = CommandType.Text
-        hotelCommand.CommandText = "Select * from UWP_Staff"
-        hotelCommand.Connection = OracleConnection
+        StaffCommand.CommandType = CommandType.Text
+        StaffCommand.CommandText = "Select * from UWP_Staff"
+        StaffCommand.Connection = OracleConnection
 
-        hotelAdapter.SelectCommand = hotelCommand
-        hotelBuilder = New System.Data.OracleClient.OracleCommandBuilder(hotelAdapter)
-        hotelAdapter.Fill(hotelTable)
+        StaffAdapter.SelectCommand = StaffCommand
+        StaffCommandBuilder = New System.Data.OracleClient.OracleCommandBuilder(StaffAdapter)
+        StaffAdapter.Fill(StaffTable) 'name for the staff table
 
 
-        ' Set up hotel table 
-        hotelCommand.CommandType = CommandType.Text
-        hotelCommand.CommandText = "Select * from hotel"
-        hotelCommand.Connection = OracleConnection
 
-        hotelAdapter.SelectCommand = hotelCommand
-        hotelBuilder = New System.Data.OracleClient.OracleCommandBuilder(hotelAdapter)
-        hotelAdapter.Fill(hotelTable)
     End Sub
     ' set the connecting string to debug 
     ' The Enumeration Data Type for user response 

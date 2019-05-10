@@ -21,4 +21,8 @@
     Private Sub btnQualPrev_Click(sender As Object, e As EventArgs) Handles btnQualPrev.Click
 
     End Sub
+
+    Private Sub btnQualNew_Click(sender As Object, e As EventArgs) Handles btnQualNew.Click
+
+    End Sub
 End Class

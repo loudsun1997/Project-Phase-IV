@@ -18,20 +18,6 @@
     Friend Shared hotelTable As New System.Data.DataTable
 
     Public Shared Sub LogInAtRunTime()
-
-    End Sub
-    ' set the connecting string to debug 
-    ' The Enumeration Data Type for user response 
-    Public Enum ResponseType
-        OK
-        Cancel
-    End Enum
-
-    Friend Shared Result As ResponseType
-    Friend Shared UserName As String
-        Friend Shared PassWord As String
-        Friend Shared Server As String
-
         ' set the connecting string   
         OracleConnection.ConnectionString = "Data Source=" & Server & ";User ID=" & UserName & ";Password=" & PassWord & ";Unicode=True"
         ' Set up booking table
@@ -45,6 +31,20 @@
         hotelBuilder = New System.Data.OracleClient.OracleCommandBuilder(hotelAdapter)
         hotelAdapter.Fill(hotelTable)
     End Sub
+    ' set the connecting string to debug 
+    ' The Enumeration Data Type for user response 
+    Public Enum ResponseType
+        OK
+        Cancel
+    End Enum
+
+    Friend Shared Result As ResponseType
+    Friend Shared UserName As String
+        Friend Shared PassWord As String
+        Friend Shared Server As String
+
+
+
     Public Shared Sub main()
         Dim connected As Boolean
 
@@ -67,5 +67,4 @@
         End If
     End Sub
 
-End Class
 End Class

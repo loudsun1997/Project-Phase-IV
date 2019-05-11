@@ -68,14 +68,16 @@
 
 
 
-        Dim r As DataRow
+        Dim b As DataRow
 
-        r = Oracle.SpecQualificationsTable.NewRow
-        Oracle.SpecQualificationsTable.Rows.Add(r)
+        b = Oracle.QualificationsTable.NewRow
+        Oracle.QualificationsTable.Rows.Add(b)
         ' The new row is added at the end
         qualificationsBindingSource.MoveLast()
 
+
         txtBoxQualPg.Text = (qualificationsBindingSource.Position + 1) & "/" & qualificationsBindingSource.Count
+
     End Sub
 
     Private Sub btnInfoNext_Click(sender As Object, e As EventArgs) Handles btnInfoNext.Click
@@ -233,7 +235,7 @@
         DatePickerDOB.DataBindings.Clear()
 
         staffBindingSource.DataSource = Nothing
-        Oracle.SpecStaffTable.Clear() 'clear SpecWorkExperienceTable
+        Oracle.StaffTable.Clear() 'clear WorkExperienceTable
 
         If boxField.Text = "TYPE" Then
             Oracle.searchQualType(boxValue.Text)
@@ -242,7 +244,7 @@
 
         End If
 
-        staffBindingSource.DataSource = Oracle.SpecStaffTable
+        staffBindingSource.DataSource = Oracle.StaffTable
         txtStaffNo.DataBindings.Add("Text", staffBindingSource, "StaffNo")
         txtFName.DataBindings.Add("Text", staffBindingSource, "FName")
         txtLName.DataBindings.Add("Text", staffBindingSource, "LName")
@@ -304,9 +306,9 @@
         qualificationsBindingSource.DataSource = Nothing
         workExperienceBindingSource.DataSource = Nothing
 
-        Oracle.StaffTable.Clear() 'clear SpecWorkExperienceTable
-        Oracle.SpecQualificationsTable.Clear() 'clear SpecQualificationsTable
-        Oracle.SpecWorkExperienceTable.Clear() 'clear SpecWorkExperienceTable
+        Oracle.StaffTable.Clear() 'clear WorkExperienceTable
+        Oracle.QualificationsTable.Clear() 'clear QualificationsTable
+        Oracle.WorkExperienceTable.Clear() 'clear WorkExperienceTable
 
         Oracle.allStaff()
 
@@ -378,12 +380,12 @@
     End Sub
 
     Private Sub loadSubTables(staffNo As String)
-        Oracle.SpecQualificationsTable.Clear() 'clear SpecQualificationsTable
-        Oracle.SpecWorkExperienceTable.Clear() 'clear SpecWorkExperienceTable
+        Oracle.QualificationsTable.Clear() 'clear QualificationsTable
+        Oracle.WorkExperienceTable.Clear() 'clear WorkExperienceTable
         Oracle.getQual(staffNo)
         Oracle.getEx(staffNo)
-        qualificationsBindingSource.DataSource = Oracle.SpecQualificationsTable
-        workExperienceBindingSource.DataSource = Oracle.SpecWorkExperienceTable
+        qualificationsBindingSource.DataSource = Oracle.QualificationsTable
+        workExperienceBindingSource.DataSource = Oracle.WorkExperienceTable
 
         DatePickerQual.DataBindings.Add("Text", qualificationsBindingSource, "QualDate")
         DatePickerQual.Format = DateTimePickerFormat.Custom   'format date
@@ -511,8 +513,11 @@
 
     Private Sub btnQualSave_Click(sender As Object, e As EventArgs) Handles btnQualSave.Click
         Try
+            qualificationsBindingSource.DataSource = Oracle.QualificationsTable
             qualificationsBindingSource.EndEdit()
-            Oracle.QualificationsAdapter.Update(Oracle.SpecQualificationsTable)
+
+            Oracle.QualificationsAdapter.Update(Oracle.QualificationsTable)
+
 
             btnInfoNew.Enabled = True
             btnInfoSave.Enabled = True
@@ -539,10 +544,10 @@
 
 
 
-        Dim r As DataRow
+        Dim c As DataRow
 
-        r = Oracle.WorkExperienceTable.NewRow
-        Oracle.WorkExperienceTable.Rows.Add(r)
+        c = Oracle.WorkExperienceTable.NewRow
+        Oracle.WorkExperienceTable.Rows.Add(c)
         ' The new row is added at the end
         workExperienceBindingSource.MoveLast()
 
@@ -551,6 +556,7 @@
 
     Private Sub btnExpSave_Click(sender As Object, e As EventArgs) Handles btnExpSave.Click
         Try
+            workExperienceBindingSource.DataSource = Oracle.WorkExperienceTable
             workExperienceBindingSource.EndEdit()
             Oracle.WorkExperienceAdapter.Update(Oracle.WorkExperienceTable)
 

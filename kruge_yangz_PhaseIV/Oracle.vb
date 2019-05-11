@@ -10,27 +10,24 @@
     Friend Shared StaffCommand As New System.Data.OracleClient.OracleCommand
     Friend Shared StaffCommandBuilder As System.Data.OracleClient.OracleCommandBuilder
     Friend Shared StaffTable As New System.Data.DataTable
-    Friend Shared SpecStaffTable As New System.Data.DataTable
+
 
     ' One command, adapter and builder for each table
     Friend Shared WorkExperienceAdapter As New System.Data.OracleClient.OracleDataAdapter
     Friend Shared WorkExperienceCommand As New System.Data.OracleClient.OracleCommand
     Friend Shared WorkExperienceBuilder As System.Data.OracleClient.OracleCommandBuilder
     Friend Shared WorkExperienceTable As New System.Data.DataTable
-    Friend Shared SpecWorkExperienceTable As New System.Data.DataTable
+
 
 
     Friend Shared QualificationsAdapter As New System.Data.OracleClient.OracleDataAdapter
     Friend Shared QualificationsCommand As New System.Data.OracleClient.OracleCommand
     Friend Shared QualificationsBuilder As System.Data.OracleClient.OracleCommandBuilder
     Friend Shared QualificationsTable As New System.Data.DataTable
-    Friend Shared SpecQualificationsTable As New System.Data.DataTable
 
     Public Shared Sub LogInAtRunTime()
         ' set the connecting string  
-        Server = "EDDB"
-        UserName = "yangz"
-        PassWord = "qwertQWERTqwert12345"
+
 
         OracleConnection.ConnectionString = "Data Source=" & Server & ";User ID=" & UserName & ";Password=" & PassWord & ";Unicode=True"
 
@@ -46,7 +43,7 @@
 
         QualificationsAdapter.SelectCommand = QualificationsCommand
         QualificationsBuilder = New System.Data.OracleClient.OracleCommandBuilder(QualificationsAdapter)
-        QualificationsAdapter.Fill(SpecQualificationsTable) 'name for the staff table
+        QualificationsAdapter.Fill(QualificationsTable) 'name for the staff table
 
 
 
@@ -58,7 +55,7 @@
 
         WorkExperienceAdapter.SelectCommand = WorkExperienceCommand
         WorkExperienceBuilder = New System.Data.OracleClient.OracleCommandBuilder(WorkExperienceAdapter)
-        WorkExperienceAdapter.Fill(SpecWorkExperienceTable) 'name for the staff table
+        WorkExperienceAdapter.Fill(WorkExperienceTable) 'name for the staff table
 
     End Sub
 
@@ -69,7 +66,7 @@
 
         WorkExperienceAdapter.SelectCommand = WorkExperienceCommand
         WorkExperienceBuilder = New System.Data.OracleClient.OracleCommandBuilder(WorkExperienceAdapter)
-        WorkExperienceAdapter.Fill(SpecStaffTable) 'name for the staff table
+        WorkExperienceAdapter.Fill(StaffTable) 'name for the staff table
 
     End Sub
 
@@ -81,7 +78,7 @@
 
         QualificationsAdapter.SelectCommand = QualificationsCommand
         QualificationsBuilder = New System.Data.OracleClient.OracleCommandBuilder(QualificationsAdapter)
-        QualificationsAdapter.Fill(SpecStaffTable) 'name for the staff table
+        QualificationsAdapter.Fill(StaffTable) 'name for the staff table
 
     End Sub
 

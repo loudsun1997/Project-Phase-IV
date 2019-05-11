@@ -31,7 +31,7 @@ Partial Class FormClassEmployee
         Me.btnQualNew = New System.Windows.Forms.Button()
         Me.btnQualSave = New System.Windows.Forms.Button()
         Me.btnQualDelete = New System.Windows.Forms.Button()
-        Me.btnSeach = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
         Me.btnAll = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.txtHrsPerWk = New System.Windows.Forms.TextBox()
@@ -187,14 +187,14 @@ Partial Class FormClassEmployee
         Me.btnQualDelete.Text = "Delete"
         Me.btnQualDelete.UseVisualStyleBackColor = True
         '
-        'btnSeach
+        'btnSearch
         '
-        Me.btnSeach.Location = New System.Drawing.Point(639, 488)
-        Me.btnSeach.Name = "btnSeach"
-        Me.btnSeach.Size = New System.Drawing.Size(75, 23)
-        Me.btnSeach.TabIndex = 9
-        Me.btnSeach.Text = "Search"
-        Me.btnSeach.UseVisualStyleBackColor = True
+        Me.btnSearch.Location = New System.Drawing.Point(639, 488)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearch.TabIndex = 9
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = True
         '
         'btnAll
         '
@@ -363,6 +363,7 @@ Partial Class FormClassEmployee
         '
         'DatePickerDOB
         '
+        Me.DatePickerDOB.CustomFormat = "mm/dd/yyyy"
         Me.DatePickerDOB.Location = New System.Drawing.Point(102, 278)
         Me.DatePickerDOB.Name = "DatePickerDOB"
         Me.DatePickerDOB.Size = New System.Drawing.Size(216, 20)
@@ -370,6 +371,7 @@ Partial Class FormClassEmployee
         '
         'DatePickerStartDate
         '
+        Me.DatePickerStartDate.CustomFormat = "mm/dd/yyyy"
         Me.DatePickerStartDate.Location = New System.Drawing.Point(472, 289)
         Me.DatePickerStartDate.Name = "DatePickerStartDate"
         Me.DatePickerStartDate.Size = New System.Drawing.Size(200, 20)
@@ -377,6 +379,7 @@ Partial Class FormClassEmployee
         '
         'DatePickerFinishDate
         '
+        Me.DatePickerFinishDate.CustomFormat = "mm/dd/yyyy"
         Me.DatePickerFinishDate.Location = New System.Drawing.Point(472, 312)
         Me.DatePickerFinishDate.Name = "DatePickerFinishDate"
         Me.DatePickerFinishDate.Size = New System.Drawing.Size(200, 20)
@@ -384,6 +387,7 @@ Partial Class FormClassEmployee
         '
         'DatePickerQual
         '
+        Me.DatePickerQual.CustomFormat = "mm/dd/yyyy"
         Me.DatePickerQual.Location = New System.Drawing.Point(472, 29)
         Me.DatePickerQual.Name = "DatePickerQual"
         Me.DatePickerQual.Size = New System.Drawing.Size(200, 20)
@@ -866,7 +870,7 @@ Partial Class FormClassEmployee
         Me.Controls.Add(Me.txtHrsPerWk)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnAll)
-        Me.Controls.Add(Me.btnSeach)
+        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.btnQualDelete)
         Me.Controls.Add(Me.btnQualSave)
         Me.Controls.Add(Me.btnQualNew)
@@ -892,7 +896,7 @@ Partial Class FormClassEmployee
     Friend WithEvents btnQualNew As Button
     Friend WithEvents btnQualSave As Button
     Friend WithEvents btnQualDelete As Button
-    Friend WithEvents btnSeach As Button
+    Friend WithEvents btnSearch As Button
     Friend WithEvents btnAll As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents txtHrsPerWk As TextBox

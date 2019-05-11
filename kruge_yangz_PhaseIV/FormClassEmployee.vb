@@ -271,13 +271,17 @@
         staffBindingSource.DataSource = Nothing
         qualificationsBindingSource.DataSource = Nothing
         workExperienceBindingSource.DataSource = Nothing
-        Oracle.SpecStaffTable.Clear() 'clear SpecWorkExperienceTable
+
+        Oracle.StaffTable.Clear() 'clear SpecWorkExperienceTable
         Oracle.SpecQualificationsTable.Clear() 'clear SpecQualificationsTable
         Oracle.SpecWorkExperienceTable.Clear() 'clear SpecWorkExperienceTable
 
-        'Oracle.allStaff()
+        Oracle.allStaff()
 
-        staffBindingSource.DataSource = Oracle.SpecStaffTable
+        staffBindingSource.DataSource = Oracle.StaffTable
+
+
+        'staff
         txtStaffNo.DataBindings.Add("Text", staffBindingSource, "StaffNo")
         txtFName.DataBindings.Add("Text", staffBindingSource, "FName")
         txtLName.DataBindings.Add("Text", staffBindingSource, "LName")
@@ -298,12 +302,13 @@
         txtPosPermTemp.DataBindings.Add("Text", staffBindingSource, "PosPermTemp")
         txtPayType.DataBindings.Add("Text", staffBindingSource, "TypeOfPay")
 
-        Oracle.StaffCommand.CommandText = "Select * from UWP_Staff "
 
-        Oracle.StaffTable.Clear()
-        Oracle.StaffAdapter.Fill(Oracle.StaffTable)
-
+        'page nums
         txtEmpPageNum.Text = (staffBindingSource.Position + 1) & "/" & staffBindingSource.Count
+        txtBoxQualPg.Text = (qualificationsBindingSource.Position + 1) & "/" & qualificationsBindingSource.Count
+        txtBoxExpPg.Text = (workExperienceBindingSource.Position + 1) & "/" & workExperienceBindingSource.Count
+
+
     End Sub
 
     Private Sub btnQualDelete_Click(sender As Object, e As EventArgs) Handles btnQualDelete.Click

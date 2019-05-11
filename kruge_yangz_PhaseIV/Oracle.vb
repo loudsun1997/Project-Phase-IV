@@ -27,7 +27,11 @@
     Friend Shared SpecQualificationsTable As New System.Data.DataTable
 
     Public Shared Sub LogInAtRunTime()
-        ' set the connecting string   
+        ' set the connecting string  
+        Server = "EDDB"
+        UserName = "yangz"
+        PassWord = "qwertQWERTqwert12345"
+
         OracleConnection.ConnectionString = "Data Source=" & Server & ";User ID=" & UserName & ";Password=" & PassWord & ";Unicode=True"
 
 

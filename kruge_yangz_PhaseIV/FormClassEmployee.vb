@@ -57,19 +57,37 @@
     End Sub
 
     Private Sub btnQualNew_Click(sender As Object, e As EventArgs) Handles btnQualNew.Click
+        btnInfoNew.Enabled = False
+        btnInfoSave.Enabled = False
+        btnInfoDelete.Enabled = False
+        btnExpNew.Enabled = False
+        btnExpSave.Enabled = False
+        btnExpDelete.Enabled = False
+        btnAll.Enabled = False
+        btnSearch.Enabled = False
 
+
+
+        Dim r As DataRow
+
+        r = Oracle.SpecQualificationsTable.NewRow
+        Oracle.SpecQualificationsTable.Rows.Add(r)
+        ' The new row is added at the end
+        qualificationsBindingSource.MoveLast()
+
+        txtBoxQualPg.Text = (qualificationsBindingSource.Position + 1) & "/" & qualificationsBindingSource.Count
     End Sub
 
     Private Sub btnInfoNext_Click(sender As Object, e As EventArgs) Handles btnInfoNext.Click
         staffBindingSource.MoveNext()
         txtEmpPageNum.Text = (staffBindingSource.Position + 1) & "/" & staffBindingSource.Count
 
-        Oracle.StaffCommand.CommandText = "Select Distinct S.* " &
-                                          "From UWP_Staff S" &
-                                          "Left Join UWP_Qualifications Q" &
-                                          " on  S.Staff_No = Q.Staff_No " &
-                                          "Left Join UWP_WorkExperience W" &
-                                          " on  S.Staff_No = W.Staff_No "
+        'Oracle.StaffCommand.CommandText = "Select Distinct S.* " &
+        '                                  "From UWP_Staff S" &
+        '                                  "Left Join UWP_Qualifications Q" &
+        '                                  " on  S.Staff_No = Q.Staff_No " &
+        '                                  "Left Join UWP_WorkExperience W" &
+        '                                  " on  S.Staff_No = W.Staff_No "
     End Sub
 
     Private Sub btnInfoPrev_Click(sender As Object, e As EventArgs) Handles btnInfoPrev.Click
@@ -130,6 +148,15 @@
             staffBindingSource.EndEdit()     'Update Not sure if this line is necessary???????
             Oracle.StaffAdapter.Update(Oracle.StaffTable)
 
+            btnQualNew.Enabled = True
+            btnQualSave.Enabled = True
+            btnQualDelete.Enabled = True
+            btnExpNew.Enabled = True
+            btnExpSave.Enabled = True
+            btnExpDelete.Enabled = True
+            btnAll.Enabled = True
+            btnSearch.Enabled = True
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -151,16 +178,20 @@
 
         r = Oracle.StaffTable.NewRow
         Oracle.StaffTable.Rows.Add(r)
-        ' The new row is added at the end
+
         staffBindingSource.MoveLast()
 
         txtEmpPageNum.Text = (staffBindingSource.Position + 1) & "/" & staffBindingSource.Count
+
     End Sub
 
     Private Sub btnInfoSave_Click(sender As Object, e As EventArgs) Handles btnInfoSave.Click
         Try
+
+            'staffBindingSource
             staffBindingSource.EndEdit()
             Oracle.StaffAdapter.Update(Oracle.StaffTable)
+
 
             btnQualNew.Enabled = True
             btnQualSave.Enabled = True
@@ -172,6 +203,7 @@
             btnSearch.Enabled = True
         Catch ex As Exception
             MessageBox.Show(ex.Message)
+
         End Try
     End Sub
 
@@ -314,11 +346,35 @@
     Private Sub btnQualDelete_Click(sender As Object, e As EventArgs) Handles btnQualDelete.Click
         qualificationsBindingSource.RemoveCurrent()
         txtBoxQualPg.Text = (qualificationsBindingSource.Position + 1) & "/" & qualificationsBindingSource.Count
+
+        btnInfoNew.Enabled = True
+        btnInfoSave.Enabled = True
+        btnInfoDelete.Enabled = True
+        btnQualNew.Enabled = True
+        btnQualSave.Enabled = True
+        btnQualDelete.Enabled = True
+        btnExpNew.Enabled = True
+        btnExpSave.Enabled = True
+        btnExpDelete.Enabled = True
+        btnAll.Enabled = True
+        btnSearch.Enabled = True
     End Sub
 
     Private Sub btnExpDelete_Click(sender As Object, e As EventArgs) Handles btnExpDelete.Click
         workExperienceBindingSource.RemoveCurrent()
         txtBoxExpPg.Text = (workExperienceBindingSource.Position + 1) & "/" & workExperienceBindingSource.Count
+
+        btnInfoNew.Enabled = True
+        btnInfoSave.Enabled = True
+        btnInfoDelete.Enabled = True
+        btnQualNew.Enabled = True
+        btnQualSave.Enabled = True
+        btnQualDelete.Enabled = True
+        btnExpNew.Enabled = True
+        btnExpSave.Enabled = True
+        btnExpDelete.Enabled = True
+        btnAll.Enabled = True
+        btnSearch.Enabled = True
     End Sub
 
     Private Sub loadSubTables(staffNo As String)
@@ -451,5 +507,63 @@
             btnExpLast.Enabled = True
 
         End If
+    End Sub
+
+    Private Sub btnQualSave_Click(sender As Object, e As EventArgs) Handles btnQualSave.Click
+        Try
+            qualificationsBindingSource.EndEdit()
+            Oracle.QualificationsAdapter.Update(Oracle.SpecQualificationsTable)
+
+            btnInfoNew.Enabled = True
+            btnInfoSave.Enabled = True
+            btnInfoDelete.Enabled = True
+            btnExpNew.Enabled = True
+            btnExpSave.Enabled = True
+            btnExpDelete.Enabled = True
+            btnAll.Enabled = True
+            btnSearch.Enabled = True
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnExpNew_Click(sender As Object, e As EventArgs) Handles btnExpNew.Click
+        btnInfoNew.Enabled = False
+        btnInfoSave.Enabled = False
+        btnInfoDelete.Enabled = False
+        btnQualNew.Enabled = False
+        btnQualSave.Enabled = False
+        btnQualDelete.Enabled = False
+        btnAll.Enabled = False
+        btnSearch.Enabled = False
+
+
+
+        Dim r As DataRow
+
+        r = Oracle.WorkExperienceTable.NewRow
+        Oracle.WorkExperienceTable.Rows.Add(r)
+        ' The new row is added at the end
+        workExperienceBindingSource.MoveLast()
+
+        txtEmpPageNum.Text = (workExperienceBindingSource.Position + 1) & "/" & workExperienceBindingSource.Count
+    End Sub
+
+    Private Sub btnExpSave_Click(sender As Object, e As EventArgs) Handles btnExpSave.Click
+        Try
+            workExperienceBindingSource.EndEdit()
+            Oracle.WorkExperienceAdapter.Update(Oracle.WorkExperienceTable)
+
+            btnInfoNew.Enabled = True
+            btnInfoSave.Enabled = True
+            btnInfoDelete.Enabled = True
+            btnQualNew.Enabled = True
+            btnQualSave.Enabled = True
+            btnQualDelete.Enabled = True
+            btnAll.Enabled = True
+            btnSearch.Enabled = True
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

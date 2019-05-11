@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D6DA31AE-DA23-4689-9422-891376FEC0D7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>kruge_yangz_PhaseIV.Oracle</StartupObject>
     <RootNamespace>kruge_yangz_PhaseIV</RootNamespace>
     <AssemblyName>kruge_yangz_PhaseIV</AssemblyName>
     <FileAlignment>512</FileAlignment>

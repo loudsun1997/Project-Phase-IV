@@ -17,3 +17,16 @@ C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\bin\Deb
 C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.exe
 C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.xml
 C:\Users\yangz.ION\Documents\GitHub\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.pdb
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.vbprojResolveAssemblyReference.cache
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.FormClassLogin.resources
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.FormClassEmployee.resources
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.Resources.resources
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.vbproj.GenerateResource.cache
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.vbproj.CoreCompileInputs.cache
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.exe
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.xml
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\obj\Debug\kruge_yangz_PhaseIV.pdb
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\bin\Debug\kruge_yangz_PhaseIV.exe.config
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\bin\Debug\kruge_yangz_PhaseIV.exe
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\bin\Debug\kruge_yangz_PhaseIV.pdb
+J:\Spring2019\Database\kruge_yangzPhaseIV2\Project-Phase-IV\kruge_yangz_PhaseIV\bin\Debug\kruge_yangz_PhaseIV.xml
